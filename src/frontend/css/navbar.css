@@ -34,7 +34,7 @@
     border-radius: 40px;
     box-shadow: 0px 4px 4px var(--shadow);
     height: 50px;
-    width: 582px;   /* widen to ~620px if the links feel cramped */
+    width: 582px;
     margin: 0;
     padding-left: 12px;
     padding-right: 9px;
@@ -48,7 +48,6 @@
     justify-content: space-between;
 }
 
-/* every link, including Contact, shares this exact size and shape */
 .nav-links > a {
     display: flex;
     align-items: center;
@@ -117,7 +116,7 @@
 }
 
 .account-btn .action-bg {
-    background: var(--color-major);
+    background: var(--glow-ai-mid);
     border: 1px solid var(--color-light);
     border-radius: 40px;
     box-shadow: 0px 4px 8px var(--shadow);
