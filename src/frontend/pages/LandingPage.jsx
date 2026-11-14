@@ -1,25 +1,36 @@
 import React from 'react';
 import Section from "../components/Section";
+import homeBg from "../images/home-bg.jpg";
+import ArrowCircleIcon from "../svg/ArrowCircleIcon";
+
+const HERO_TITLE_LINES = ["SUPPORTING", "AGRICULTURE VIA", "VOLUNTEER", "ENGAGEMENT"];
 
 function LandingPage() {
     return (
         <>
-            {/* Hero stays a plain section */}
             <section id="Home">
-                <div className="home-text">
-                    <h1>CULTIVATE CHANGE</h1>
-                    <h3>Volunteer to Support Sustainable Agriculture</h3>
-                    <p>
-                        Connecting passionate individuals with local farms to provide hands-on help, strengthen food security, and grow resilient communities
-                    </p>
-                </div>
+                <div className="hero__content">
+                    <h1 className="hero__title">
+                        {HERO_TITLE_LINES.map((line) => (
+                            <span className="hero__line" key={line}>
+                                <span className="hero__initial">{line[0]}</span>
+                                {line.slice(1)}
+                            </span>
+                        ))}
+                    </h1>
 
-                <div className="home-btn">
-                    <button type="button">Register Here</button>
+                    <p className="hero__text">
+                        Immerse yourself in the daily realities of Philippine agriculture to understand, appreciate, and actively sustain the future of food production.
+                    </p>
+
+                    <a className="cta-btn" href="#Register">
+                        <span className="cta-btn__text">Get Involved</span>
+                        <ArrowCircleIcon className="cta-btn__icon" />
+                    </a>
                 </div>
 
                 <div className="home-image">
-                    <img src="frontend/images/home-bg.jpg" alt="Farming background" width="1000" />
+                    <img src={homeBg} alt="" />
                 </div>
             </section>
 
@@ -198,5 +209,4 @@ function LandingPage() {
         </>
     );
 }
-
 export default LandingPage;
